@@ -12,11 +12,14 @@ print('The length of your name is:')
 print(len(myName))
 
 print('What is your age?')
-myAge = input()  # receives a STRING
-while isinstance(myAge, int) is False:
+try:
+    myAge = int(input())  # receives a STRING
+
+except ValueError:
     print("Invalid input. That isn't a number!")
     myAge = input('Enter your real age please: ')
-    print(isinstance(myAge, int))
+    #while isinstance(myAge, int) is False:
+        #print(isinstance(myAge, int))
 
 # since myAge is a string:
 # 1. convert->int before adding

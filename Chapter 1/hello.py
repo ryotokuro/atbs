@@ -2,7 +2,13 @@
 print('Hello World!')
 
 # Receive name from input() and store
-myName = input('What is your name? ')
+myName = None
+while not(isinstance(myName, str)):  # while myName is NOT a string, keep asking
+    try:
+        myName = str(input('What is your name? '))
+
+    except ValueError:
+        print('Enter your real name!')
 
 # Note: myName is a STRING
 print('It is good to meet you, ' + myName)
@@ -12,7 +18,7 @@ print('The length of your name is:')
 print(len(myName))
 
 myAge = None
-while not(isinstance(myAge, int)):  # while myAge is NOT an integer, loop
+while not(isinstance(myAge, int)):  # while myAge is NOT an integer, keep asking
     try:
         print('What is your age?')
         myAge = int(input())  # receives a STRING

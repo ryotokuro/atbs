@@ -11,15 +11,17 @@ print('It is good to meet you, ' + myName)
 print('The length of your name is:')
 print(len(myName))
 
-print('What is your age?')
-try:
-    myAge = int(input())  # receives a STRING
+myAge = None
+while not(isinstance(myAge, int)):  # while myAge is NOT an integer, loop
+    try:
+        print('What is your age?')
+        myAge = int(input())  # receives a STRING
 
-except ValueError:
-    print("Invalid input. That isn't a number!")
-    myAge = input('Enter your real age please: ')
-    #while isinstance(myAge, int) is False:
-        #print(isinstance(myAge, int))
+    except ValueError:
+        print("Invalid input. That isn't a number!")
+        # myAge = input('Enter your real age please: ')
+        # while isinstance(myAge, int) is False:
+            # print(isinstance(myAge, int))
 
 # since myAge is a string:
 # 1. convert->int before adding

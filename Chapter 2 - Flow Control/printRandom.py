@@ -1,4 +1,5 @@
 import random as r
+from random import *
 
 x = list()
 y = list()
@@ -17,4 +18,4 @@ for row in range(1,6):
 			print('X', end="    ")
 	
 	print('\n')
-print(x[row-1], y[col-1])
+	

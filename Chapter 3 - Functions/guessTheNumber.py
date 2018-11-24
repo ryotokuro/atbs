@@ -10,7 +10,7 @@ while guess != number:
 	if guess < number:
 		print('Your guess is too low.')
 	else: # guess is bigger than the number
-		print('Your guess is too high.')
+                print('Your guess is too high.')
 
         numberOfGuesses += 1
 	guess = int(input('Take a guess.\n'))

@@ -9,4 +9,6 @@ def collatz():
 
 
 number = int(input())
-print(collatz(number))
+while number != 1:
+    number = collatz(number)
+    print(number)

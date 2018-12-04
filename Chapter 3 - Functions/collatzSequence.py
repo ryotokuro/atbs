@@ -7,4 +7,6 @@ def collatz():
         # number is odd
         return 3 * (number+1)
 
-print(collatz)
+
+number = int(input())
+print(collatz(number))

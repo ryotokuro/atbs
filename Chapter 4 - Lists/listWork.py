@@ -45,3 +45,14 @@ numbers = [1, 642, 42, -32, 21, 24, 73, 9116, 324]
 print(numbers)
 print(numbers.sort())
 print(numbers.sort(reverse=True))
+
+print("Printing sorted list 'spam'")
+print(spam.sort())
+
+# NOTE: Cannot sort list with BOTH numbers and characters i.e.
+mixed = [35, 'yes', 24, 1, 'twenty']
+try:
+    print(mixed.sort())
+
+except TypeError:
+    print('Error: Cannot sort list with numbers AND characters!')

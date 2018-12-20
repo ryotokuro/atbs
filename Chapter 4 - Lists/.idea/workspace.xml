@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c25aa816-1b4c-416d-99c8-8828cc6699f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/magic8Ball2.py" beforeDir="false" afterPath="$PROJECT_DIR$/magic8Ball2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutatingStrings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/magic8Ball2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mutatingStrings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -87,6 +96,7 @@
         <option value="$PROJECT_DIR$/multipleAssignment.py" />
         <option value="$PROJECT_DIR$/listWork.py" />
         <option value="$PROJECT_DIR$/magic8Ball2.py" />
+        <option value="$PROJECT_DIR$/mutatingStrings.py" />
       </list>
     </option>
   </component>
@@ -227,6 +237,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mutatingStrings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>

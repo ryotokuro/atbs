@@ -5,4 +5,3 @@ try:
 
 except TypeError:
     print('Error: tuples cannot be mutated.')
-    

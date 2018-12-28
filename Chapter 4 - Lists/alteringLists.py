@@ -1,9 +1,13 @@
 def separatedList(spam):
     print(spam)
+    string = ''
     for i in range(len(spam)):
-        newList
-    return spam
+        if i == len(spam)-1:
+            string += 'and ' + spam[i]
+        else:
+            string += spam[i] + ', '
+    return string
 
 
 spam = ['apples', 'bananas', 'tofu', 'cats']
-separatedList(spam)
+print(separatedList(spam))

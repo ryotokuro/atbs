@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c25aa816-1b4c-416d-99c8-8828cc6699f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/alteringLists.py" beforeDir="false" afterPath="$PROJECT_DIR$/alteringLists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/characterPictureGrid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,13 +21,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alteringLists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="119">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/characterPictureGrid.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -55,6 +60,7 @@
         <option value="$PROJECT_DIR$/testingTuples.py" />
         <option value="$PROJECT_DIR$/deepLists.py" />
         <option value="$PROJECT_DIR$/alteringLists.py" />
+        <option value="$PROJECT_DIR$/characterPictureGrid.py" />
       </list>
     </option>
   </component>
@@ -293,10 +299,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/alteringLists.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/characterPictureGrid.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

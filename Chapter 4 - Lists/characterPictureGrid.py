@@ -18,3 +18,6 @@ grid = [['.', '.', '.', '.', '.', '.'],
 # ...OOO...
 # ....O....
 
+for y in range len(grid):
+ for x in range len(grid):
+  print(grid[x][y])

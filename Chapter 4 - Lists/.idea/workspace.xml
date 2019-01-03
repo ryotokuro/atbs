@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c25aa816-1b4c-416d-99c8-8828cc6699f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/characterPictureGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/characterPictureGrid.py" afterDir="false" />
-    </list>
+    <list default="true" id="c25aa816-1b4c-416d-99c8-8828cc6699f3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/characterPictureGrid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state>
+              <caret selection-end-line="22" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -310,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/characterPictureGrid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state>
+          <caret selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>

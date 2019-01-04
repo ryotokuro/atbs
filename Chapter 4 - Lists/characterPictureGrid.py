@@ -21,3 +21,7 @@ grid = [['.', '.', '.', '.', '.', '.'],
 for y in range(len(grid)):
     for x in range(len(grid)):
         print(grid[x][y])
+
+
+if x = 0:
+   grid[x] = '.'

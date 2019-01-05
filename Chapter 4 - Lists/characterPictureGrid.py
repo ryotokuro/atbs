@@ -23,5 +23,5 @@ for y in range(len(grid)):
         print(grid[x][y])
 
 
-if x = 0:
-   grid[x] = '.'
+if x == 0 or x == len(grid):
+    grid[x] = '.'

@@ -25,3 +25,10 @@ for y in range(len(grid)):
 
 if x == 0 or x == len(grid):
     grid[x] = '.'
+
+elif y == 1:
+    grid[x] = 'o'
+
+elif y == len(grid)
+
+# note: 2 is same as 1

@@ -6,5 +6,5 @@ FOR TOTAL BEGINNERS
 
 The highly acclaimed book recommended by multiple sources online.
 I am now trying to find time to go through it to upskill myself in Python and to automate simple tasks :)
-
+s
 

@@ -8,17 +8,12 @@ grid =  [['.', '.', '.', '.', '.', '.'],
          ['.', 'O', 'O', '.', '.', '.'],
          ['.', '.', '.', '.', '.', '.']]
 
-a = [[],[],[],[],[],[]]
+# reversed first flips the sublist order
+# then * unwraps each of the lists, such that zip only takes the first column of each sublist
+# and zip then combines them into their own sublists so now it is rotated!
+grid = zip(*reversed(grid))
 
 for i in grid:
-    curr = 0
-    for j in i:
-        print(j, end=' ')
-        a[curr].append(j)
-        curr += 1
-    print()
-
-for i in a:
     for j in i:
         print(j, end=' ')
     print()

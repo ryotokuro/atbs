@@ -29,6 +29,7 @@ if x == 0 or x == len(grid):
 elif y == 1:
     grid[x] = 'o'
 
-elif y == len(grid)
+elif y == len(grid):
+    print('no')
 
 # note: 2 is same as 1

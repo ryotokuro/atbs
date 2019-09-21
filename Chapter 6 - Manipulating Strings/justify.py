@@ -28,3 +28,9 @@ print('Toby'.center(10))
 print('Mark'.center(10))
 print('Peta'.center(10))
 print('Bane'.center(10))
+
+print()
+
+print('Nugget')
+print('Biscuit'.rjust(14))
+print('Nugget in a biscuit'.center(20))

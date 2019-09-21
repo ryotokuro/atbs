@@ -14,3 +14,15 @@ if len(sys.argv) < 2:
 
 account = sys.argv[1]   # first command line arg is the account name
 print(account)
+
+import tkinter as tk 
+
+root= tk.Tk() 
+   
+canvas1 = tk.Canvas(root, width = 300, height = 300) 
+canvas1.pack()
+      
+button1 = tk.Button (root, text='pw:' + sys.argv[1], command=root.destroy) 
+canvas1.create_window(150, 150, window=button1) 
+    
+root.mainloop()

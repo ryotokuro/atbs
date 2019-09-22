@@ -11,6 +11,7 @@ text = (pyperclip.paste()).split('\r\n')
 print(text)
 text = ['*'+text[i] for i, v in enumerate(text)]
 print(text)
+'\r\n'.join(text)
 
 # 3. copy new text to the clipboard
 pyperclip.copy(text)

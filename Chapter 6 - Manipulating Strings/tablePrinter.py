@@ -13,3 +13,7 @@
 # oranges Bob cats
 # cherries Carol moose
 # banana David goose
+
+def printTable():
+    for i in tableData():
+        len(i)

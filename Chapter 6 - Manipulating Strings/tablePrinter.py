@@ -9,11 +9,23 @@
 #               ['dogs', 'cats', 'moose', 'goose']]
 
 # OUTPUT
-# apples Alice dogs
-# oranges Bob cats
+#   apples Alice  dogs
+#  oranges   Bob  cats
 # cherries Carol moose
-# banana David goose
+#   banana David goose
 
-def printTable():
-    for i in tableData():
-        len(i)
+def printTable(table):
+    length = 0
+    for item in table:
+        for inner in item:
+            length = max(length, len(inner))
+    print(length)
+
+    for item in table:
+        for inner in item:
+            print(inner.rjust(length, ' '), end=' ')
+        print()
+
+print(printTable([['apples', 'oranges', 'cherries', 'banana'],
+                    ['Alice', 'Bob', 'Carol', 'David'],
+                    ['dogs', 'cats', 'moose', 'goose']]))

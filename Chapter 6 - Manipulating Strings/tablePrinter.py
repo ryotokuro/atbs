@@ -15,16 +15,14 @@
 #   banana David goose
 
 def printTable(table):
-    length = 0
-    for item in table:
-        for inner in item:
-            length = max(length, len(inner))
-    print(length)
+    table = list(zip(*reversed(table[::-1])))
+    # print(table)
 
     for item in table:
+        length = len(max(item, key=len))
+        print(length)
         for inner in item:
             print(inner.rjust(length, ' '), end=' ')
-        print()
 
 print(printTable([['apples', 'oranges', 'cherries', 'banana'],
                     ['Alice', 'Bob', 'Carol', 'David'],

@@ -17,19 +17,18 @@
 import itertools as it
 
 def printTable(table):
-    table = list(zip(*reversed(table[::-1])))
-    temp = list(zip(*reversed(table[::-1])))
-
-    lengths = {}
+    lengths = {}  # stores lengths per column
     index = 0
-    for col in temp:
+    for col in table:
         lengths[index] = len(max(col, key=len))
-        index += 1
+        index += 1  # tracks the column number for the hashmap
     # print(lengths)
-        
+    
+    table = list(zip(*reversed(table[::-1])))  # flip table for printing
+    # print the 2d array
     for item in table:
         col = 0
-        for inner in item:
+        for inner in item:  # adding largest column spacing
             print(inner.rjust(lengths[col], ' '), end=' ')
             col += 1
         print()
@@ -37,3 +36,7 @@ def printTable(table):
 printTable([['apples', 'oranges', 'cherries', 'banana'],
                     ['Alice', 'Bob', 'Carol', 'David'],
                     ['dogs', 'cats', 'moose', 'goose']])
+print()
+printTable([['maximumvoltage', 'shahkhan', 'zerolimiT'],
+                    ['carrots', 'carricatures', 'superman'],
+                    ['zezima', 'goku', 'vegeta']])

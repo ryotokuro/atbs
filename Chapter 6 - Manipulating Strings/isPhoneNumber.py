@@ -1,12 +1,10 @@
 def isPhoneNumber(text):
-    # format XXX-XXX-XXXX
-    if len(text) != 12:
-        return False
+    print(text + ' is a phone number:', end=' ')
     
-    return (text[:3] + text[4:7] + text[8:]).isdecimal() and text[3] == text[7] == '-'
+    # format XXX-XXX-XXXX
+    return len(text) == 12 and (text[:3] + text[4:7] + text[8:]).isdecimal() and text[3] == text[7] == '-'
 
 
-print('415-555-4242 is a phone number:')
 print(isPhoneNumber('415-555-4242'))
-print('Moshi moshi is a phone number:')
 print(isPhoneNumber('Moshi moshi'))
+print(isPhoneNumber('000-000-00001'))

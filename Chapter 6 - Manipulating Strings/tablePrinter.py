@@ -20,36 +20,20 @@ def printTable(table):
     table = list(zip(*reversed(table[::-1])))
     temp = list(zip(*reversed(table[::-1])))
 
-    '''
-    for item in temp:
-        col = 0
-        try:
-            length = len(max(item, key=len))
-        except TypeError:
-            pass
-        for inner in item:
-            print(inner.rjust(length, ' '), end=' ')
-        print()
-    '''
     lengths = {}
     index = 0
     for col in temp:
         lengths[index] = len(max(col, key=len))
         index += 1
-    print(lengths)
+    # print(lengths)
         
-'''
-    for item, var in it.zip_longest(table, temp):
+    for item in table:
         col = 0
-        try:
-            length = len(max(var, key=len))
-        except TypeError:
-            pass
-        # print(length)
         for inner in item:
-            print(inner.rjust(length, ' '), end=' ')
+            print(inner.rjust(lengths[col], ' '), end=' ')
+            col += 1
         print()
-'''
-print(printTable([['apples', 'oranges', 'cherries', 'banana'],
+
+printTable([['apples', 'oranges', 'cherries', 'banana'],
                     ['Alice', 'Bob', 'Carol', 'David'],
-                    ['dogs', 'cats', 'moose', 'goose']]))
+                    ['dogs', 'cats', 'moose', 'goose']])

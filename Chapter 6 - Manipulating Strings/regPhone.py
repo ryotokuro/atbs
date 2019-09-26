@@ -5,3 +5,6 @@
 
 import re  # import regex module
 
+# r signals to use RAW strings (disregards the \)
+phoneNumRegex = re.compile(r'\d{3}-\d{3}-\d{4}')
+

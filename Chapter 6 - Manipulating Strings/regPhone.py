@@ -60,7 +60,7 @@ phoneFind = phoneRegex.findall(string)
 print('Phone:', phoneFind[0], phoneFind[1])
 
 string = 'Home: 9473-323 | Work: (61) 2344-234'
-phoneRegex = re.compile(r'(\(\d{2}\)\s)?(\d{4}-\d{3})')
+phoneRegex = re.compile(r'(\(\d{2}\) )?(\d{4}-\d{3})')
 phoneFind = phoneRegex.findall(string)
 print(phoneFind)
-print('Phone:', *(phoneFind[0])[1:], *phoneFind[1])
+print('Phone: ', *(phoneFind[0]), ' and ', *(phoneFind[1]), sep='')

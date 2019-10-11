@@ -9,25 +9,27 @@ text = py.paste()
 
 # regex magix (133) 788-2233 and 234-2343
 # find all phone numbers
-phoneFilter = re.compile(r'''(
+phone_filter = re.compile(r'''(
                         (\d{3}(\s|-|\.)?|\(\d{3}\)(\s|-|\.)?)?  # area code + separator
                         (\d{3})             # 3 digits
                         (\s|-|\.)           # separator
                         (\d{4})             # 4 digits
                         )''', re.VERBOSE)
 
-numbers = []
-for groups in phoneFilter.findall(text):
-    numbers.append(groups[0])
+# i could save this as a GUI using tkintker
+# then user could choose which list to save
+# numbers = []
+matches = []
+for groups in phone_filter.findall(text):
+    matches.append(groups[0])
 
-if not numbers:  # if empty list
+if not matches:  # if empty list
     print('No phone numbers were found in the text :(')
-else:
-    numbers = '\n'.join(numbers)
-    py.copy(numbers) 
+
+num_numbers = len(matches)
 
 # find all emails 
-emailFilter = re.compile(r'''(
+email_filter = re.compile(r'''(
                         [a-zA-Z0-9._%+-]+   # username
                         @  # @ symbol
                         [a-zA-Z0-9.-]+  # domain
@@ -35,15 +37,13 @@ emailFilter = re.compile(r'''(
                         (\.[a-zA-Z]+)?  # area domain
                         )''', re.I | re.VERBOSE)
 
-emails = []
-for groups in emailFilter.findall(text):
-    emails.append(groups[0])
+for groups in email_filter.findall(text):
+    matches.append(groups[0])
 
-if not emails:
+if len(matches) == num_numbers:
     print('No emails were found in the text :(')
-else:
-    emails = '\n'.join(emails)
-    py.copy(emails.lower())  # convert to lower and copy to clipboard
-    
 
-
+matches = '\n'.join(matches)  # convert to string and join by new line
+py.copy(matches.lower())  # convert to lower and copy to clipboard
+print('Copied to clipboard:')
+print(matches.lower())

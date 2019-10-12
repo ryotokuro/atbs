@@ -1,7 +1,8 @@
 import os
 
 # adjusts depending on what OS the script is running on
-raw_path = 'C:\\Users\\autum\\Desktop\\Pizza'
+# raw_path = 'C:\\Users\\autum\\Desktop\\Pizza'
+raw_path = '..\\..'  # navigating backwards (relative)
 
 # path = os.path.join(raw_path) for os dependent config
 
@@ -15,3 +16,6 @@ try:
 except FileNotFoundError:  # if it doesn't exist
     print("Let's try create the directory then!")
     
+
+os.chdir('atbs')
+print(os.getcwd())

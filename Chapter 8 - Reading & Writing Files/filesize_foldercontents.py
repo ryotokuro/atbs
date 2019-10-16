@@ -10,7 +10,8 @@ print(os.listdir("..\..\..\.."), end="\n\n")
 
 # combining getsize() and listdir to get size of directory files
 size = 0
-for file in os.listdir():
-    size += os.path.getsize(file)
+for file in os.listdir(".."):  # use join to get size of full file?
+    size += os.path.getsize(os.path.join(os.path.abspath(".."), file))
+    print(os.path.join(os.path.abspath(".."), file))
 
-print(os.path.abspath("") + ":", size)
+print("Size:", size)

@@ -17,3 +17,5 @@ for q in query:
         print(q, "is a file!")
     else:
         print("Requested file/directory does not exist!")
+
+# D:\\ tells you that a flash drive is connected!

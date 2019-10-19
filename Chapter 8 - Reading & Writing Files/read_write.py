@@ -17,4 +17,4 @@ else:
     text_file.write("hello")
     
 text_file = open(".\\hello.txt", 'r')  # then open in read mode
-print("after:" text_file.read())
+print("after:", text_file.read())

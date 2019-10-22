@@ -18,3 +18,9 @@ else:
     
 text_file = open(".\\hello.txt", 'r')  # then open in read mode
 print("after:", text_file.read())
+
+doesnt_exist = open(".\\ghost.txt", 'w')
+doesnt_exist.write("SPOOOOKY")
+
+doesnt_exist = open(".\\ghost.txt", 'r')
+print(doesnt_exist.read())

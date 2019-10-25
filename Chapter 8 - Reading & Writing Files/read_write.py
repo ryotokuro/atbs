@@ -25,4 +25,5 @@ doesnt_exist.write("SPOOOOKY")
 doesnt_exist = open(".\\ghost.txt", 'r')
 print(doesnt_exist.read())
 
-# append mode, pass 'a'```````
+# append mode, pass 'a'
+doesnt_exit = open(".\\hello.txt"

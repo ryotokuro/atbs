@@ -21,9 +21,13 @@ print("after:", text_file.read())
 
 doesnt_exist = open(".\\ghost.txt", 'w')
 doesnt_exist.write("SPOOOOKY")
-
+    
 doesnt_exist = open(".\\ghost.txt", 'r')
 print(doesnt_exist.read())
 
 # append mode, pass 'a'
-doesnt_exit = open(".\\hello.txt"
+doesnt_exist = open(".\\ghost.txt", 'a')
+doesnt_exist.write("Bacon is NOT a vegetable")
+
+doesnt_exist = open(".\\ghost.txt", 'r')
+print(doesnt_exist.read())

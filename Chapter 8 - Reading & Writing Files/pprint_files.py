@@ -8,5 +8,6 @@ print(p.pformat(cats))
 
 
 fileObj = open('myCats.py', 'w')
+# pformat is like format() in Java
 fileObj.write('cats = ' + p.pformat(cats) + '\n')
 fileObj.close()

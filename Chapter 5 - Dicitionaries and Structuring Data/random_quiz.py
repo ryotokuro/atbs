@@ -82,20 +82,21 @@ answers = {
             "Good Night": "Graduation",
             "Bittersweet Poetry": "Graduation",
             # 808s & Heartbreak
-            "": "Graduation",
-            "": "Graduation",
-            "": "Graduation",
-            "": "Graduation",
-            "": "Graduation",
-            
+            "Heartless": "808s & Heartbreak",
+            "Coldest Winter": "808s & Heartbreak",
+            "Streetlights": "808s & Heartbreak",
+            "": "808s & Heartbreak",
+            "": "808s & Heartbreak"
           }
 
 # generate 35 unique quiz files
 for i in range(35):
     # create quiz and answer key files
-    os.path('.' + str(i))  # current directory, create new path for each quiz
-
+    quiz_file = open('kanye_quiz%s.txt' % i+1), 'w')  # current directory, create new path for each quiz
+    answers_file= open('quiz_answers%s.txt' % i+1), 'w')
+    
     # write out header for the quiz
+    quiz_file.write('Name:\n\nDate\n\nPeriod:\n\n')
 
     # shuffle order of the states
 

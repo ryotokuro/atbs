@@ -97,7 +97,11 @@ for i in range(35):
     
     # write out header for the quiz
     quiz_file.write('Name:\n\nDate\n\nPeriod:\n\n')
+    quiz_file.write((' '*20) + 'Kanye Discography Quiz (Form %s)' % i+1)
+    quiz_file.write('\n\n')
 
     # shuffle order of the states
+    album_list = list(answers.keys())
+    random.shuffle(album_list)
 
     # loop through all 50 states, generating a question for each

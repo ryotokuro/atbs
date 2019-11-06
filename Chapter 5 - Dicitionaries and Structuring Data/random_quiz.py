@@ -18,6 +18,7 @@ import random  # to shuffle and randomise questions and answers
     'Which albums feature the iconic bear in the album cover?':'College Dropout, Graduation',
     'What is Kanye West\'s most played radio hit?':'No ID'
 '''
+'''
 answers = {
             # The College Dropout
             "Intro": "The College Dropout",
@@ -88,20 +89,52 @@ answers = {
             "": "808s & Heartbreak",
             "": "808s & Heartbreak"
           }
+'''
+
+'''
+answers = {
+        'Australia': 'Canberra',
+        '
+'''
+
+# The quiz data. Keys are states and values are their capitals.
+capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
+            'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
+            'Connecticut': 'Hartford', 'Delaware': 'Dover', 'Florida': 'Tallahassee',
+            'Georgia': 'Atlanta', 'Hawaii': 'Honolulu', 'Idaho': 'Boise', 'Illinois':
+            'Springfield', 'Indiana': 'Indianapolis', 'Iowa': 'Des Moines', 'Kansas':
+            'Topeka', 'Kentucky': 'Frankfort', 'Louisiana': 'Baton Rouge', 'Maine':'Augusta',
+            'Maryland': 'Annapolis', 'Massachusetts': 'Boston', 'Michigan': 'Lansing',
+            'Minnesota': 'Saint Paul', 'Mississippi': 'Jackson', 'Missouri': 'Jefferson City',
+            'Montana': 'Helena', 'Nebraska': 'Lincoln', 'Nevada': 'Carson City',
+            'New Hampshire': 'Concord', 'New Jersey': 'Trenton', 'New Mexico': 'Santa Fe',
+            'New York': 'Albany', 'North Carolina': 'Raleigh', 'North Dakota': 'Bismarck',
+            'Ohio': 'Columbus', 'Oklahoma': 'Oklahoma City', 'Oregon': 'Salem',
+            'Pennsylvania': 'Harrisburg', 'Rhode Island': 'Providence',
+            'South Carolina': 'Columbia', 'South Dakota': 'Pierre', 'Tennessee': 'Nashville',
+            'Texas': 'Austin', 'Utah': 'Salt Lake City', 'Vermont': 'Montpelier',
+            'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia': 'Charleston',
+            'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 # generate 35 unique quiz files
 for i in range(35):
     # create quiz and answer key files
-    quiz_file = open('kanye_quiz%s.txt' % i+1), 'w')  # current directory, create new path for each quiz
+    quiz_file = open('capitals_quiz%s.txt' % i+1), 'w')  # current directory, create new path for each quiz
     answers_file= open('quiz_answers%s.txt' % i+1), 'w')
     
     # write out header for the quiz
     quiz_file.write('Name:\n\nDate\n\nPeriod:\n\n')
-    quiz_file.write((' '*20) + 'Kanye Discography Quiz (Form %s)' % i+1)
+    quiz_file.write((' '*20) + 'State Capitals Quiz (Form %s)' % i+1)
     quiz_file.write('\n\n')
 
     # shuffle order of the states
-    album_list = list(answers.keys())
-    random.shuffle(album_list)
+    states = list(capitals.keys())
+    random.shuffle(states)
+
+    # fetch right and wrong answers
+    correct_answers = capitals[states[i]]
+    wrong_answers = list(capitals.values())
+    del wrong_answers[i]  # remove the correct answer
 
     # loop through all 50 states, generating a question for each
+    

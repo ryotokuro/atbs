@@ -135,6 +135,7 @@ for i in range(35):
     correct_answers = capitals[states[i]]
     wrong_answers = list(capitals.values())
     del wrong_answers[i]  # remove the correct answer
+    
 
     # loop through all 50 states, generating a question for each
     

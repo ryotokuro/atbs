@@ -135,6 +135,14 @@ for i in range(35):
     correct_answers = capitals[states[i]]
     wrong_answers = list(capitals.values())
     del wrong_answers[i]  # remove the correct answer
+
+    # RANDOM
+    correctAnswer = capitals[states[questionNum]]
+    WrongAnswers = list(capitals.values())
+    del wrongAnswers[wrongAnswers.index(correctAnswer)]
+    wrongAnswers = random.sample(wrongAnswers, 3)
+    answerOptions = wrongAnswers + [correctAnswer]
+    random.shuffle(answerOptions)
     
 
     # loop through all 50 states, generating a question for each

@@ -47,22 +47,19 @@ for i in range(35):
 for question_num in range(50):  # looping through all 50 states
     # Fetch right and wrong answers
     correct_answer = capitals[states[question_num]]
-    wrong_answers = list(capitals.values())
+    wrong_answers = list(capitals.values())  # generate a new list with all the capitals
     del wrong_answers[wrong_answers.index(correct_answer)]  # remove the correct answer
     wrong_answers = random.sample(wrong_answers, 3)  # derive 3 multiple choice answers which are incorrect
-    answer_options = wrong_answers + [correct_answer]
+    answer_options = wrong_answers + [correct_answer]  # add the right answer in (list join)
     random.shuffle(answer_options)  # shuffle and make it random order so it's not always the last option
 
     # Write the question and the answer options to the quiz file.
     quiz_file.write('%s. What is the capital of %s?\n' % (question_num + 1, states[question_num]))
 
     for i in range(4):
-        quiz_file.write(' %s. %s\n' % ('ABCD'[i], answer_options[i]))
-        quiz_file.write('\n')
+        quiz_file.write('%s. %s\n' % ('ABCD'[i], answer_options[i]))  # answer options A., B., ...
+    quiz_file.write('\n')
         # Write the answer key to a file.
-        answers_file.write('%s. %s\n' % (question_num + 1, 'ABCD'[answer_options.index(correctAnswer)]))
-    quiz_file.close()
-    answers_file.close()
-
-    # loop through all 50 states, generating a question for each
-    
+    answers_file.write('%s. %s\n' % (question_num + 1, 'ABCD'[answer_options.index(correct_answer)]))
+quiz_file.close()
+answers_file.close() 

@@ -4,14 +4,27 @@
 # this can be specified when running the program via command line
 # python multi_clipboard spam
 
+# Usage: py.exe multi_clipboard <save> <keyword> - saves clipboard contents to keyword
+#        py.exe multi_clipboard save <keyboard> - loads keyword to clipboard
+#        py.exe multi_clipboard list - loads all keywords to clipboard
+
 import sys
 import pyperclip as p
+import shelve
 
+# check number of arguments is valid
 if len(sys.argv) > 1:
     keyword = sys.argv[1]   # capture keyword from user command-line arg
+    print("Error: Not enough in-line arguments.")
     sys.exit()
 
+shelf = shelve.open("multi_clipboard")
+
+keywords = {}
 if sys.argv[1].lower() == "save":
-    p.copy()
+    keywords[sys.argv[2]] = p.paste()  # save clipboard contents to keyword (saved in dict)
 
 elif sys.argv[1].lower() == "list":
+    p.copy(keywords.keys())  # copy keywords to clipboard
+
+shelf.close()

@@ -5,7 +5,7 @@
 # python multi_clipboard spam
 
 # Usage: py.exe multi_clipboard <save> <keyword> - saves clipboard contents to keyword
-#        py.exe multi_clipboard save <keyboard> - loads keyword to clipboard
+#        py.exe multi_clipboard save <keyword> - loads keyword to clipboard
 #        py.exe multi_clipboard list - loads all keywords to clipboard
 
 import sys
@@ -19,19 +19,26 @@ if len(sys.argv) < 2:
     
     sys.exit()
 
+# save clipboard contents onto a shelve file
 shelf = shelve.open("multi_clipboard")
 
-keywords = {}
+# saving content to keyword
 if sys.argv[1].lower() == "save":
-    keywords[sys.argv[2]] = p.paste()  # save clipboard contents to keyword (saved in dict)
-    print(keywords)
+    if len(sys.argv) != 3:
+        print("Error: Missing keyword to save to.")
+        print("Usage: python multi_clipboard save <keyword>")
+    else:
+        shelf[sys.argv[2]] = p.paste()  # save clipboard contents to keyword (saved in dict)
+        print(shelve)
 
 elif sys.argv[1].lower() == "list":
     print("Command: List requested")
-    print(keywords)
-    if keywords:
-        p.copy(keywords.keys())  # copy keywords to clipboard
-    else:
-        print("There are currently no stored keywords.")
+    print(shelf.keys())
+    p.copy(str(list(shelf.keys())))
+
+# assume default is to copy keyword to shelf
+else:
+    print("No argument specified. Copying keyword to shelve.")
+    p.copy(shelf[sys.argv[1]])
 
 shelf.close()

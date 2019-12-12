@@ -14,7 +14,6 @@ import shelve
 
 # check number of arguments is valid
 if len(sys.argv) < 2:
-    keyword = sys.argv[1]   # capture keyword from user command-line arg
     print("Error: Not enough in-line arguments.")
     
     sys.exit()
@@ -29,16 +28,23 @@ if sys.argv[1].lower() == "save":
         print("Usage: python multi_clipboard save <keyword>")
     else:
         shelf[sys.argv[2]] = p.paste()  # save clipboard contents to keyword (saved in dict)
-        print(shelve)
+        print("Clipboard contents saved to keyword '", sys.argv[2], "'.", sep='')
 
 elif sys.argv[1].lower() == "list":
-    print("Command: List requested")
-    print(shelf.keys())
     p.copy(str(list(shelf.keys())))
+    print("List of keys copied to clipboard.")
+    print("Keys:", str(list(shelf.keys())))
+
+# delete a keyword from the shelf
+elif sys.argv[1].lower() == "delete":
+    del shelf[sys.argv[2]]
 
 # assume default is to copy keyword to shelf
+elif sys.argv[1] in shelf:
+    print("No argument specified. Loading matching contents to clipboard.")
+    p.copy(shelf[sys.argv[1]])  # assume this is the keyword e.g. python multiclipboard potato
+
 else:
-    print("No argument specified. Copying keyword to shelve.")
-    p.copy(shelf[sys.argv[1]])
+    print("Keyword not found. Please try again.")
 
 shelf.close()

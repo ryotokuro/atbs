@@ -19,3 +19,12 @@ for file in files:
     match = datePattern.search(file)
 
     # skip if date doesn't exist in file name
+    if match is None:
+        continue
+
+    # split match object into parts
+    before = match.group(1)
+    month = match.group(2)
+    day = match.group(3)
+    year = match.group(4)
+    
